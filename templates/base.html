@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'icon/ICON.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/cliente_s.css' %}">
+    <link rel="stylesheet" href="{% static 'css/productos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <link rel= "stylesheet" href="{% static 'css/inventario.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <title>Bienvenido cliente</title>
+</head>
+<body>
+    <div class="container-fluid">
+       <!--1 fila-->
+       <div class="row ">
+           <header class="col bg-light d-flex justify-content-between align-items-center p-2 ">
+            <img src="{% static 'img/kairos.jpeg' %}"alt="" width:"80" height="80" class="circular--square">
+            <a href="{% url 'logout'%}"><button class="btn btn-danger"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesion</button></a>
+           </header>
+       </div>
+
+    <!-- 2 fila: contenido: barra de navegacion  - contenido ppal-->
+    <div class="row">
+       
+        <div class="col-2 bgNav">
+            <div class="actor">
+            <img src="{% static 'img/17004.png' %}">
+            <h4>CLIENTE</h4>
+            <h5>{{user.username}}</h5>
+            </div>
+            <h4>Usuario</h4>
+            <ul>
+                <li><a href="{% url 'verperfil' %}"><i class="fa-solid fa-user"></i> Ver perfil</a></li>
+                <li><a href="{% url 'direccion' %}"><i class="fa-solid fa-house"></i> Ver mis direcciones</a></li>
+            </ul>
+            <h4>Pedidos</h4>
+            <ul>
+                <li><a href="{% url 'catalogo'%}"><i class="fa-brands fa-product-hunt"></i>Mirar catalogo</a></li>
+                <li ><a href="{% url 'tienda'%}"><i class="fa-brands fa-product-hunt"></i> Mirar carrito</a></li>
+                <li><a href="{% url 'pedido' %}"><i class="fa-brands fa-product-hunt"></i> Consultar pedidos</a></li>
+            </ul>
+            <h4>Calificaciones</h4>
+            <ul>
+                <li > <a href="{% url 'comentarios' %}"><i class="fa-solid fa-star"></i>Hacer comentario</a></li>
+                <li  ><a href="{% url 'comentario' %}"><i class="fa-solid fa-star"></i>Consultar Calificaciones</a></li>
+            </ul>
+            <ul>
+                <li><a href="{% url 'logout'%}"><button class="btn btn-danger"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesion</button></a></li>
+            </ul>
+ 
+        </div>
+        <div class="col-10">
+            {% block content %}
+            {% endblock %}
+        </div>

@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Productos</title>
+  <link rel="icon" href="{% static 'icon/ICON.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/productos.css' %}">
+</head>
+<body>
+  <header>
+		<br>
+		<div class="redes">
+			<ul>
+				<li><a href="https://www.instagram.com/kairos.nc/?hl=es-la" target="_blank"><img src="{% static 'img/instagram.png' %}"></a></li>
+			</ul>
+			<ul>
+				<li><a href="https:/wa.me/573183550894" target="_blank"><img src="{% static 'img/whatsapp.png' %}"></a></li>
+			</ul>
+			<ul>
+			<li><a href="{% url 'join' %}"><img src= "{% static 'img/cart.jpeg' %}"height="30px" width="30px"></a></li>
+		</ul>
+				
+		</div>
+		<div class="contenido">
+			<p class="logo"><a href="{% url 'index' %}">KAIROS</a></p>
+			<nav>
+				<a href="{% url 'index' %}">Quienes somos</a>
+				<a href="{% url 'index' %}">Nuestros principios</a>
+				<a href="{% url 'registro' %}">Registrate</a>
+				<a href="{% url 'join' %}">Iniciar sesión</a>
+				<a href="{% url 'contacto' %}">Contactanos</a>
+				</nav>
+			</div>
+			<div class="redes">
+				<ul>
+					<li><a href="https://www.instagram.com/kairos.nc/?hl=es-la" target="_blank"></a></li>
+				</ul>
+			</div>
+		</header>
+<div class="titulo">
+ <h1>Todos los Productos</h1>
+</div>
+<section>
+{% load humanize %}
+{% for p in object_list %}
+{% if p.Active == True %}
+<div class="seccion1">
+  <figure>
+    <img src="{{p.Image.url}}">
+    <div class="capa">
+      <a href="{% url 'join' %}""><button class="botons">Detalles</button></a>
+      <h1>{{p.name | title}}</h1>
+      <p>{{p.description}}</p>
+      <p>${{p.price | intcomma}}</p>
+    </div>
+  </figure>
+</div>
+{% endif %}
+{% endfor %}
+<footer>
+  <div class="contenido">
+   <p> Sena Centro de servicios financieros</p>
+   <p> Programa técnico en desarrollo de Software</p>
+   <p> Coordinación académica de tecnología e informática</p>
+   <p> Todos los derechos reservados - 2022</p>
+   <p>Diseño de JJSW software-UTI 2022</p>
+ </div>
+</footer>
+</body>

@@ -1,0 +1,23 @@
+<div class="card">
+    <h5 class="card-header">
+        <div class="card-body">
+            <h5 class ="card-title bg-success text-primary ">{{ direccion.city}} - {{direccion.state}}</h5>
+            <div class="card-title bg-primary text-dark">
+                {{direccion.postal_code}}
+            </div>
+            {% if edit%}
+            <div class="mt-2">
+            <a href="{% url 'updated' direccion.pk %}" class="btn btn-primary mt-2">Editar</a>
+            {% if direccion.default %}
+            <div class="text-info">
+                Direccion principal
+            </div>
+            {%else%}
+             <a href="{% url 'default' direccion.pk %}" class="btn btn-warning mt-2">Default</a>
+             <a href="{% url 'Delete' direccion.pk %}" class="btn btn-danger mt-2">Eliminar</a>
+            {%endif%}
+            {%endif%}
+            </div>
+        </div>
+    </h5>
+</div>

@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registro</title>
+    <link rel="icon" href="{% static 'icon/ICON.ico'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+</head>
+<body>
+                <form class=" form-register  " method="post">
+                    
+                 {% csrf_token %}
+                    {% load crispy_forms_tags %}
+                    <h4>Formulario Registro</h4>
+                    <br>
+                    {{form | crispy}}
+                    <a href="https://escueladeprivacidad.co/2020/05/28/aceptar-los-terminos-y-condiciones-y-aceptar-la-politica-de-privacidad-no-significa-aceptar-el-tratamiento-de-los-datos-personales/">Terminos y condiciones</a>
+                    <button type="submit" class="botons"><i class="fas fa-sign-in-alt"></i>  Registrarse </button>
+                   <a href="{% url 'index'%}"> <button type="button" class="botons"> Inicio </button></a>
+                   <a href="{% url 'join'%}">¿Ya tienes cuenta ?</a>
+                   
+
+            
+                </form>
+                
+
+
+        </div>
+    </div>
+</body>
+</html>

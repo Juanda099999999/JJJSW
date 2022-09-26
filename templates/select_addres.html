@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col">
+    <div class="h3">
+        Selecciona una direccion de envio
+    </div>
+    <div class="mt-2">
+        {%for direccion in direccion %}
+         <div class="card mb-2">
+            <div class="card-body">
+                <h5 class="card-title bg-success text-primary">{{ direccion.city}} - {{direccion.state}}</h5>
+                <div class="card-title bg-primary text-dark">
+                    {{direccion.postal_code}}
+                </div>
+                <a href="{% url 'establece' direccion.pk %}"><button class="btn btn-primary"> Seleccionar</button></a>
+            </div>
+         </div>
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+        <div class="rowm mt-5 mb-5">
+            <div class="col aligC justify-content-center">
+           <i class="fa-solid fa-user"></i> VER PERFIL
+            </div>
+            <!-- 1 Fila -->
+            <div class="col">
+                <div class="container">
+                         <form class="form-register">
+                            <div class="row">
+                                <div class="row mb-2">
+                                 <div class="col-sm-6">
+                                  <input type="text" id="nombres" placeholder="Nombre" class="form-control" value="{{user.first_name}}" readonly>
+                              </div>
+                                  <div class="col-sm-6">
+                                  <input type="text" id="apellidos" placeholder="Apellido"  class="form-control" value="{{user.last_name}}" readonly>
+                              </div>
+                          </div>
+                          <!-- 2 Fila -->
+                              <br><br>
+                                <div class="row mb-2">
+                                 <div class="col-sm-6">
+                                    <input type="email"id="correo" placeholder="Correo electrónico"class="form-control" value="{{user.email}}" readonly>
+                                </div>
+                                 <div class="col-sm-6">
+                                    <input type="password" id="contraseña antigua" placeholder="Contraseña" readonly value="{{user.password}}" required class="form-control">
+                            </div>
+                            </div>
+                            </div>
+                         </form>
+{%endblock%}

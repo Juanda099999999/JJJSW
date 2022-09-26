@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Recordar clave</title>
+
+    <!-- Nuestro css-->
+    <link rel="icon" href="{% static 'icon/ICON.ico' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/registro.css'%}">
+
+</head>
+<body>
+ 
+                <form class="form-register">
+                    <br>
+                    <br>
+                    <div class="form-group" id="user-group">
+                        <input type="email" class="form-control controls" required placeholder="Correo electronico" name="username"/>
+                    </div>
+                    <button type="submit" class="botons"> Enviar codigo de recuperación </button>
+                  <a href="{% url 'index' %}"> <button type="button" class="botons"> Regresar a inicio de sesión </button></a>
+                </form>
+        </div>
+    </div>
+</body>
+</html>
+</head>
+</html>

@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Kairos</title>
+	<link rel="icon" href="{% static 'icon/ICON.ico' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css'%}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+		<br>
+		<div class="redes">
+			<ul>
+				<li><a href="https://www.instagram.com/kairos.nc/?hl=es-la" target="_blank"><img src="{% static 'img/instagram.png' %}"></a></li>
+			</ul>
+			
+			<ul>
+				<li><a href="https:/wa.me/573183550894" target="_blank"><img src="{% static 'img/whatsapp.png' %}"></a></li>
+			</ul>
+			<ul>
+			<li><a href="{% url 'join' %}"><img src= "{% static 'img/cart.jpeg' %}"height="30px" width="30px"></a></li>
+		</ul>
+				
+		</div>
+		<div class="contenido">
+			<p class="logo"><a href="{% url 'index' %}">KAIROS</a></p>
+			<nav>
+				<a href="#somos-kairos">Quienes somos</a>
+				<a href="#nuestros-valores">Nuestros principios</a>
+				<a href="{% url 'registro' %}">Registrate</a>
+				<a href="{% url 'join' %}">Iniciar sesión</a>
+				<a href="{% url 'contacto' %}">Contactanos</a>
+				<a href="{% url 'manual' %}">Manual de usuario</a>
+				</nav>
+			</div>
+			<div class="redes">
+				<ul>
+					<li><a href="https://www.instagram.com/kairos.nc/?hl=es-la" target="_blank"></a></li>
+				</ul>
+			</div>
+		</header>
+
+		<section id="hero">
+			<!--<h1>Conoce nuestros productos <br>La magia de tu esencia</h1>-->
+			<a href="{% url 'registro' %}"><button>REGISTRATE AHORA!!</button></a>
+		</section>
+
+		<section id="somos-kairos">
+			<div class="contenido">
+				<div class="img-contenido"></div>
+				<div class="texto">
+					<h2 id="Quienes somos">Somos <span class="color-acento"> Kairos</span></h2>
+					<p>Kairos es una tienda virtual de Bisutería (tienda de artesanías enfocada en joyas) que se basa en la creación de productos novedosos que tienen un significado muy especial,
+					 desde el arbol de la vida hasta collares amatistas,los cuales le dan el mejor complemento a tu look!.</p>
+					 <br>
+					<a href="{% url 'productos'%}"><button><img src="{% static 'img/catalogo.png' %}">  Nuestro catalogo</button></a>
+				</div>
+			</div>
+		</section>
+
+
+
+		<section id="nuestros-valores">
+			<div class="contenido">
+				<h2>Nuestros principios</h2>
+				<div class="valores">
+					<div class="carta1">
+						<h3></h3>
+						<p>MISIÓN
+							<br><br>
+							Nuestra misión es brindar el mejor servicio a nuestros clientes,
+							asesorando y cautivando con nuestros productos generando en ellos satisfación en cada compra 
+							 
+
+						</p>
+					</div>
+
+					<div class="carta2">
+						<h3></h3>
+						<p> VISIÓN
+							<br><br>
+							Nuestra visión es poder llegar a ser una empresa reconocida por su calidad que 
+							fabrica y comercializa productos de bisutería a nivel nacional
+						    innovando y dando a conocer el arte de la bisuteria.
+
+						</p>
+					</div>
+
+					<div class="carta3">
+						<h3></h3>
+						<p>VALORES
+							<br><br>
+							En kairos el amor y pasión por nuestro trabajo nos caracteriza, damos lo mejor de nosotros brindandole a nuestros clientes
+						    cumplimiento, honestidad, confianza y calidad.
+
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="final">
+			<div class="contenido">
+				<ul>
+					<li>✅Envíos nacionales  ✅Calidad garantizada  ✅Pedidos por mayor</li>
+				</ul>
+			</div>
+			<br><br>
+			<div class="contenido">
+				<h2>Magia en tu esencia</h2>
+			</div>
+		</section>
+
+		<footer>
+			<div class="contenido">
+				<p> Sena Centro de servicios financieros</p>
+				<p> Programa técnico en desarrollo de Software</p>
+				<p> Coordinación académica de tecnología e informática</p>
+				<p> Todos los derechos reservados - 2022</p>
+				<p>Diseño de JJSW software-UTI 2022</p>
+			</div>
+		</footer>
+
+	</body>
+	</html>

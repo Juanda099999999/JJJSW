@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+        <div class="row mt-2">
+            <div class="col-8">
+                <div class="h3">
+                <h2>Revisa tu pedido</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    {% for products in cart.Products.all%}
+                      {% include 'productsorder.html'%}
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            {% url 'direccionpedido' as next_url %}
+            {% include 'resume.html' with next_url=next_url%}
+		</div>
+{%endblock%}

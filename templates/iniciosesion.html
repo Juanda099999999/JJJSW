@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="icon" href="{% static 'icon/ICON.ico' %}">
+    
+    <title>Inicio de sesión</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/registro.css'%}">
+
+</head>
+<body>
+ 
+                <form class=" form-register" method="post"</form>
+                    {% csrf_token %}
+                    <h4>Inicio de sesión</h4>
+                    <br>
+                    <div class="" id="user-group">
+                        <input type="text" name="username" class=" controls" required placeholder="Username"/>
+                    </div>
+                    <div class="" id="contrasena-group">
+                        <input type="password" name="password" class=" controls" required placeholder="Contraseña"/>
+                    </div>
+                    <a href="{% url 'cliente' %}"><button type="submit" class="botons"><i class="fas fa-sign-in-alt"></i>  Ingresar </button></a>
+                    <button type="reset" class="botons">Cancelar</button>
+                    <a href="{% url 'index' %}"> <button type="button" class="botons"> Inicio </button></a>
+                        <a href="{% url 'recordar'  %}">Recordar contraseña</a>
+                        <br>
+                        <a href="{% url 'admin:login'%}">¿Eres administrador?</a>
+                        <br>
+                        <a href="{% url 'registro'%}">¿No tienes cuenta ? Registrate!!</a>
+                    </div>
+                </form>
+        </div>
+    </div>
+</body>
+</html>
+

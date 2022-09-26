@@ -1,0 +1,5 @@
+<form action="{% url 'remove' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="product_id" value="{{products.id}}">
+    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-cart-minus"></i> Eliminar del carrito </button>
+</form>

@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Kairos</title>
+	<link rel="icon" href="{% static 'icon/ICON.ico' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css'%}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+		<br>
+		<div class="redes">
+			<ul>
+				<li><a href="https://www.instagram.com/kairos.nc/?hl=es-la" target="_blank"><img src="{% static 'img/instagram.png' %}"></a></li>
+			</ul>
+			<ul>
+				<li><a href="https:/wa.me/573183550894" target="_blank"><img src="{% static 'img/whatsapp.png' %}"></a></li>
+			</ul>
+			<ul>
+			<li><a href="{% url 'join' %}"><img src= "{% static 'img/cart.jpeg' %}"height="30px" width="30px"></a></li>
+		</ul>
+				
+		</div>
+		<div class="contenido">
+			<p class="logo"><a href="{% url 'index' %}">KAIROS</a></p>
+			<nav>
+				<a href="{% url 'index' %}">Quienes somos</a>
+				<a href="{% url 'index' %}">Nuestros principios</a>
+				<a href="{% url 'registro' %}">Registrate</a>
+				<a href="{% url 'join' %}">Iniciar sesión</a>
+				<a href="{% url 'contacto' %}">Contactanos</a>
+				</nav>
+			</div>
+			<div class="redes">
+				<ul>
+					<li><a href="https://www.instagram.com/kairos.nc/?hl=es-la" target="_blank"></a></li>
+				</ul>
+			</div>
+		</header>
+
+		<section id="hero">
+			<!--<h1>Conoce nuestros productos <br>La magia de tu esencia</h1>-->
+<<<<<<< HEAD
+            <a href="https://escueladeprivacidad.co/2020/05/28/aceptar-los-terminos-y-condiciones-y-aceptar-la-politica-de-privacidad-no-significa-aceptar-el-tratamiento-de-los-datos-personales/" target="_blank"><button>Terminos y condiciones</button></a>
+=======
+            <a href="https://escueladeprivacidad.co/2020/05/28/aceptar-los-terminos-y-condiciones-y-aceptar-la-politica-de-privacidad-no-significa-aceptar-el-tratamiento-de-los-datos-personales/"><button>Terminos y condiciones</button></a>
+>>>>>>> 5f3b8a5aa7e1914068f4d5d8cb7b85fe91725f35
+		</section>
+
+		<section id="somos-kairos">
+			<div class="contenido">
+				<div class="img-contenido"></div>
+				<div class="texto">
+					<h2 id="Quienes somos">MANUAL DEL <span class="color-acento"> USUARIO</span></h2>
+                    <br>
+					<p>El siguiente manual es una guía de referencia para los usuarios del sistema JJSW con el fin de dar a conocer las funcionalidades que ofrece y cómo realizar cada una de ellas..</p>
+                    <br>
+					<a href="{% static 'pdf/Usuario.pdf' %}"target="_blank"><button><img src="{% static 'img/catalogo.png' %}">Ver manual de usuario</button></a>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="final">
+			<br><br>
+			<div class="contenido">
+				<ul>
+					<li>✅Envíos nacionales  ✅Calidad garantizada  ✅Pedidos por mayor</li>
+				</ul>
+			</div>
+            <br><br>
+            <br><br>
+			<div class="contenido">
+				
+			</div>
+		</section>
+
+		<footer>
+			<div class="contenido">
+				<p> Sena Centro de servicios financieros</p>
+				<p> Programa técnico en desarrollo de Software</p>
+				<p> Coordinación académica de tecnología e informática</p>
+				<p> Todos los derechos reservados - 2022</p>
+				<p>Diseño de JJSW software-UTI 2022</p>
+			</div>
+		</footer>
+
+	</body>
+	</html>

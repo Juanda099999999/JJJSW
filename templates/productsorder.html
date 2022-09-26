@@ -1,0 +1,16 @@
+{% load humanize %}
+<div class="row">
+    <div class="col">
+        {%if products.Image%}
+        <img src="{{ products.Image.url }}" alt="Imagen del producto"width="60" height="60">
+        {%endif%}
+        <div class="col">
+            <div class="row">
+                <strong>{{products.name}}</strong>
+            </div>
+            <div class="row">
+                <strong class="text-danger">Precio: ${{products.price| intcomma}}</strong>
+            </div>
+        </div>
+        </div>
+</div>

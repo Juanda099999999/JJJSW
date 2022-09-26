@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load humanize %}
+	<h2>Mi carrito</h2>
+	{% if cart.Products.exists %}
+	<div class="row">
+	<div class="col-8">
+		<table class="table">
+			<thead>
+				<tr>
+                 <th scope="col"></th>
+                 <th scope="col"></th>
+                 <th scope="col"></th>
+                 <th scope="col">Cantidad</th>
+				 <th scope="col">Precio</th>
+				</tr>
+			</thead>
+			<tbody>
+
+
+
+
+				{% for cp in cart.products_related %}
+				  {% with products=cp.product %}
+				<tr>
+					<th>{{ forloop.counter }}</th>
+					<th>
+						{% if products.Image %}
+						<img src="{{products.Image.url}}" alt="Imagen del producto" width="60" height="60">
+						{%endif%}
+					</th>
+					<th>
+						{{products.name}}
+						{% include 'remove.html' %}
+					</th>
+					<th>{{cp.quantity}}</th>
+					<th>
+						<span class="font-weight-bold text-danger">${{products.price | intcomma}}</span>
+					</th>
+				</tr>
+				   {% endwith %}
+				{%endfor%}
+				<a href="{% url 'catalogo'%}"><button class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>  Sigue tu compra</button></a>
+			</tbody>
+		</table>
+	</div>
+	<div class="col">
+		<div class="card">
+			<div class="card-body">
+				<div class="font-weight-bold">
+					Subtotal({{cart.Products.count}}): <span class="text-danger">$ {{cart.subtotal | intcomma}}</span>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<a href="{% url 'order'%}"><button class="btn btn-primary">Hacer pedido</button></a>
+	</div>
+	</div>
+	{% else %}
+	<div class="row">
+	<div class="col">
+		<p class="h3">Tu carrito de compra esta vacio</p>
+		<a href="{% url 'catalogo'%}"><button class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>  Empieza tu compra</button></a>
+	</div>
+	</div>
+	{%endif%}
+{%endblock%}
+

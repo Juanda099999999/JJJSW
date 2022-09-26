@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Productos</title>
+  <link rel="icon" href="{% static 'icon/ICON.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/productos.css' %}">
+</head>
+<body>
+  <header>
+		<br>
+		<div class="redes">
+			<ul>
+				<li><a href="https://www.instagram.com/kairos.nc/?hl=es-la" target="_blank"><img src="{% static 'img/instagram.png' %}"></a></li>
+			</ul>
+			<ul>
+				<li><a href="https:/wa.me/573183550894" target="_blank"><img src="{% static 'img/whatsapp.png' %}"></a></li>
+			</ul>
+			<ul>
+			<li><a href="{% url 'join' %}"><img src= "{% static 'img/cart.jpeg' %}"height="30px" width="30px"></a></li>
+		</ul>
+				
+		</div>
+		<div class="contenido">
+			<p class="logo"><a href="{% url 'index' %}">KAIROS</a></p>
+			<nav>
+				<a href="{% url 'index' %}">Quienes somos</a>
+				<a href="{% url 'index' %}">Nuestros principios</a>
+				<a href="{% url 'registro' %}">Registrate</a>
+				<a href="{% url 'join' %}">Iniciar sesión</a>
+				<a href="{% url 'contacto' %}">Contactanos</a>
+				</nav>
+			</div>
+			<div class="redes">
+				<ul>
+					<li><a href="https://www.instagram.com/kairos.nc/?hl=es-la" target="_blank"></a></li>
+				</ul>
+			</div>
+		</header>
+<select name="Categoria" size="1" class="controls" onchange="window.location.href=this.value;">
+  <option value="{% url 'piedra' %}">Piedra</option>
+  <option value="{%url 'productos'%}">Productos</option>
+  <option value="{% url 'collares' %}">Collares</option>
+  <option value="{% url 'atrapasueño' %}">Atrapasueños</option>
+  <option value="{% url 'dijes'%}">Dijes</option>
+</select>
+<div class="titulo">
+ <h1>Piedras</h1>
+</div>
+
+<section>
+  <div class=" seccion1 Piedra_Plata">
+    <figure>
+      <img src="{% static 'img/p12.png'%}">
+      <div class="capa">
+        <a href="{% url 'join' %}"><button class="botons">Calificar</button></a>
+        <h1>Piedra Plata</h1>
+        <p>La diferencia principal entre colgante y collar es muy simple. Los colgantes son las piezas que “cuelgan” de una cadena. Principalmente suele ser la pieza de joyería que más destaca en un collar. Y el collar, es esa cadena que va alrededor del cuello.</p>  
+      </div>
+    </div>
+  </figure>
+</div>
+<div class=" seccion1">
+  <figure>
+    <img src="{% static 'img/p13.png'%}">
+    <br>
+    <div class="capa">
+      <a href="{% url 'join' %}"><button class="botons">Calificar</button></a>
+     <h1>Piedra Carmesi</h1>
+     <p>Durante la Revolución Francesa, en 1979, las mujeres llevaban un apretado cinta roja alrededor del cuello para rendir homenaje a los muertos</p>
+   </div>
+ </div>
+</figure>
+</div>
+<div class=" seccion1">
+  <figure>
+    <img src="{% static 'img/Piedra.png'%}">
+    <div class="capa">
+      <a href="{% url 'join' %}"><button class="botons">Calificar</button></a>
+      <h1>Piedra de onix</h1>
+        <p>Durante la Revolución Francesa, en 1779, las mujeres llevaban un apretado cinta roja alrededor del cuello para rendir homenaje a los muertos</p>
+    </div>
+  </div>
+</figure>
+</div>
+<footer>
+  <div class="contenido">
+   <p> Sena Centro de servicios financieros</p>
+   <p> Programa técnico en desarrollo de Software</p>
+   <p> Coordinación académica de tecnología e informática</p>
+   <p> Todos los derechos reservados - 2022</p>
+   <p>Diseño de JJSW software-UTI 2022</p>
+ </div>
+</footer>
+</body>
